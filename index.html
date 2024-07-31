@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游泳馆签到系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>游泳馆签到系统</h1>
+        <div class="input-section">
+            <label for="username">手牌号:</label>
+            <input type="text" id="username" required>
+        </div>
+        <div class="button-section">
+            <button id="signInButton">进馆签到</button>
+            <button id="signOutButton">出馆签退</button>
+        </div>
+        <div class="records-section">
+            <h2>记录</h2>
+            <div id="records">
+                <p>进馆时间: <span id="signInTime">-</span></p>
+                <p>出馆时间: <span id="signOutTime">-</span></p>
+                <p>在馆时长: <span id="duration">-</span></p>
+                <p id="overtimeMessage" style="display: none;">您已超时，请在系统补票5元！</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

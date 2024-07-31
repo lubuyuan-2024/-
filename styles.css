@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.2em; /* 增大整体字体大小 */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 3em; /* 增加内边距以适应更大的容器 */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; /* 对于手机屏幕，使用更宽的比例 */
+    max-width: 600px; /* 设置最大宽度以适应大多数手机屏幕 */
+    min-width: 300px; /* 设置最小宽度以确保在小屏幕上也有足够的空间显示内容 */
+}
+
+h1 {
+    color: #333;
+    font-size: 1.8em; /* 调整标题字体大小 */
+}
+
+label {
+    color: #333;
+    font-size: 2.4em; /* 保持手牌号字体大小 */
+}
+
+h2 {
+    color: #333;
+    font-size: 1.2em; /* 调整记录字体大小 */
+    margin-bottom: 0.8em
+}
+
+.input-section {
+    margin-bottom: 0.8em;
+}
+
+input[type="text"] {
+    padding: 0.8em; /* 增大输入框的内边距 */
+    width: 100%; /* 设置宽度为100%以充分利用容器的宽度 */
+    font-size: 1.5em; /* 增大输入框字体大小 */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* 新增的CSS规则，用于增大输入框占位符字体大小 */
+input[type="text"]::placeholder {
+    font-size: 1.8em; /* 增大占位符字体大小 */
+}
+
+.button-section {
+    display: flex; /* 修改为 flex 并设置方向 */
+    flex-direction: column; /* 堆叠按钮 */
+    margin-bottom: 0.8em;
+}
+
+button {
+    padding: 1em 1.5em; /* 增大按钮的内边距 */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 2em; /* 进一步增大按钮字体大小 */
+    margin: 0.6em 0; /* 增加按钮间的间距 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.records-section {
+    margin-top: 0.3em;
+    font-size: 1.2em; /* 增大记录区域字体大小 */
+}
+
+#overtimeMessage {
+    font-size: 1.4em; /* 增大超时消息字体大小 */
+    color: red;
+    margin-top: 0.5em;
+}
+
+/* 新增媒体查询以针对不同屏幕尺寸进行样式调整 */
+@media (max-width: 600px) {
+    .container {
+        width: 100%; /* 在小屏幕上使容器宽度为100% */
+        padding: 2em; /* 减少内边距以适应更小的屏幕 */
+    }
+
+    h1 {
+        font-size: 2em; /* 减小标题字体大小 */
+    }
+
+    label {
+        font-size: 2.2em; /* 减小手牌号字体大小 */
+    }
+
+    input[type="text"] {
+        padding: 0.8em;
+        font-size: 1.4em; /* 减小输入框字体大小 */
+    }
+
+    input[type="text"]::placeholder {
+        font-size: 1.8em; /* 减小占位符字体大小 */
+    }
+
+    button {
+        padding: 0.8em 1.2em;
+        font-size: 1.6em; /* 减小按钮字体大小 */
+    }
+
+    .records-section {
+        font-size: 1.2em; /* 减小记录区域字体大小 */
+    }
+
+    #overtimeMessage {
+        font-size: 1.2em; /* 减小超时消息字体大小 */
+    }
+}
